@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Assessment | Silk Road — Your Supply Chain Partner</title>
+<meta name="description" content="Book a free 30-minute assessment with Silk Road. We'll pinpoint the single bottleneck costing your supply chain the most — and show you how we'd clear it in 30 days.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#175FB1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#175FB1; --blue-d:#0E3E77; --blue-l:#3B86D6; --blue-xl:#7FB0E4;
+  --sky:#EAF2FB; --sky2:#F5F9FE; --ink:#15212E; --mut:#5C6B7C; --line:#E2EAF4;
+  --white:#fff; --good:#1F9D6B; --ai:#7FD8FF;
+  --disp:'Sora',system-ui,Arial,sans-serif; --sans:'Inter',system-ui,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--disp);line-height:1.12;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.hl{color:var(--ai)}
+.kicker{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;border-radius:10px;padding:.7rem 1.2rem;transition:.2s;cursor:pointer;border:1.5px solid transparent}
+.btn-pri{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(23,95,177,.28)}
+.btn-pri:hover{background:var(--blue-d);box-shadow:0 8px 22px rgba(14,62,119,.34)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navwrap{display:flex;align-items:center;justify-content:space-between;height:80px}
+.brand img{height:56px;display:block}
+.links{display:flex;gap:1.6rem}
+.links a{font-size:.92rem;font-weight:500;color:#3a4a5c;transition:.15s}
+.links a:hover{color:var(--blue)}
+@media(max-width:900px){.links{display:none}.brand img{height:46px}}
+
+/* book hero */
+.bhero{position:relative;overflow:hidden;background:#081f3d;color:#fff}
+.bhero .bg{position:absolute;inset:0;z-index:0}
+.bhero .bg svg{position:absolute;inset:0;width:100%;height:100%}
+.bhero .scrim{position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,20,40,.85),transparent 60%),radial-gradient(60% 90% at 78% 30%,rgba(28,79,143,.5),transparent 70%)}
+.sweep{position:absolute;top:0;bottom:0;width:34%;left:-40%;background:linear-gradient(90deg,transparent,rgba(127,216,255,.10),rgba(127,216,255,.18),transparent);filter:blur(2px);animation:sweep 7.5s linear infinite;z-index:1;pointer-events:none}
+@keyframes sweep{0%{left:-40%}100%{left:120%}}
+.bhero-in{position:relative;z-index:2;padding:3.8rem 0 3.2rem;max-width:44rem}
+.eyebrow{font-family:var(--disp);font-size:.8rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ai);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--ai);border-radius:2px}
+.bhero h1{font-size:2.9rem;font-weight:800;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.bhero p.lead{font-size:1.1rem;color:#c3d6f0;margin-top:1rem}
+.bhero .facts{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.bhero .fact{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:.5rem 1rem;font-size:.9rem;font-weight:600;color:#eaf3ff;backdrop-filter:blur(6px)}
+.bhero .fact svg{color:var(--ai)}
+@media(max-width:900px){.bhero h1{font-size:2.2rem}.bhero-in{padding:2.8rem 0 2.4rem}}
+
+/* booking body */
+.book-sec{padding:3.4rem 0 4.4rem}
+.book-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:2.4rem;align-items:start}
+.book-side{position:sticky;top:100px}
+.book-side h2{font-size:1.7rem;font-weight:700;margin-top:.2rem}
+.book-side .lead{color:var(--mut);margin-top:.6rem;font-size:1rem}
+.exp{list-style:none;margin:1.6rem 0 0;display:grid;gap:1.05rem}
+.exp li{display:flex;gap:.85rem;align-items:flex-start}
+.exp .ck{flex:0 0 auto;width:34px;height:34px;border-radius:9px;background:var(--sky);color:var(--blue);display:flex;align-items:center;justify-content:center}
+.exp h4{font-size:1rem;font-weight:700;margin-bottom:.15rem}
+.exp p{color:var(--mut);font-size:.9rem}
+.assure{margin-top:1.8rem;padding:1.1rem 1.2rem;background:var(--sky2);border:1px solid var(--line);border-radius:14px;font-size:.92rem;color:var(--blue-d)}
+.assure b{font-weight:700}
+.book-embed{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 18px 46px rgba(20,40,80,.10);overflow:hidden;padding:8px}
+.calendly-inline-widget{min-width:280px;height:760px;border-radius:16px;overflow:hidden}
+.fallback{padding:.6rem 1rem 1rem;text-align:center}
+@media(max-width:900px){.book-grid{grid-template-columns:1fr;gap:1.6rem}.book-side{position:static}}
+
+/* footer */
+footer{background:#0b2c53;color:#b9cbe2;padding:3.2rem 0 2rem}
+.foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-start}
+footer .flogo{width:64px;height:64px;border-radius:50%;margin-bottom:1rem}
+footer h4{font-family:var(--disp);color:#fff;font-size:1.05rem;margin-bottom:.7rem}
+footer a{color:#b9cbe2}footer a:hover{color:#fff}
+.foot .col p,.foot .col a{display:block;font-size:.9rem;margin-bottom:.4rem}
+.foot .col address{font-style:normal;font-size:.9rem;line-height:1.6;margin-bottom:.5rem}
+.social{display:inline-flex;align-items:center;gap:.5rem;margin-top:.6rem;color:#b9cbe2;font-weight:600;font-size:.9rem}
+.social .li{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.1);display:inline-flex;align-items:center;justify-content:center;transition:.2s}
+.social:hover .li{background:#0A66C2;color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:2rem;padding-top:1.3rem;font-size:.82rem;color:#8ba5c4;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+@media(prefers-reduced-motion:reduce){.sweep{animation:none}}
+</style>
+</head>
+<body>
+<div id="top"></div>
+<header class="nav">
+  <div class="wrap navwrap">
+    <a class="brand" href="https://silkroadscm.com"><img src="https://silkroadscm.com/logo.webp" alt="Silk Road SCM, Your Supply Chain Partner"></a>
+    <nav class="links">
+      <a href="https://silkroadscm.com/#who">Who We Help</a>
+      <a href="https://silkroadscm.com/#solutions">Solutions</a>
+      <a href="https://silkroadscm.com/#how">How It Works</a>
+      <a href="https://silkroadscm.com/#why">Why Us</a>
+      <a href="https://silkroadscm.com/#results">Results</a>
+      <a href="https://silkroadscm.com/#consulting">Consulting</a>
+    </nav>
+    <a class="btn btn-pri" href="#book">Book now</a>
+  </div>
+</header>
+
+<!-- BOOK HERO -->
+<section class="bhero">
+  <div class="bg">
+    <svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c2a52"/><stop offset=".6" stop-color="#081f3d"/><stop offset="1" stop-color="#05152b"/></linearGradient>
+        <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.5" fill="#3B86D6" opacity=".16"/></pattern>
+        <radialGradient id="corefill" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#bff0ff"/><stop offset=".5" stop-color="#7FD8FF"/><stop offset="1" stop-color="#2f8fd6"/></radialGradient>
+      </defs>
+      <rect width="1200" height="420" fill="url(#bg)"/>
+      <rect width="1200" height="420" fill="url(#dots)"/>
+      <path class="route" d="M120,330 C360,300 560,260 780,200 C940,156 1060,150 1180,140" fill="none" stroke="#3B86D6" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="9 11" opacity=".7"><animate attributeName="stroke-dashoffset" values="0;-40" dur="2.8s" repeatCount="indefinite"/></path>
+      <circle r="4.5" fill="#bff0ff"><animateMotion dur="4s" repeatCount="indefinite" path="M120,330 C360,300 560,260 780,200 C940,156 1060,150 1180,140"/></circle>
+      <g transform="translate(980,150)">
+        <circle r="40" fill="none" stroke="#7FD8FF" stroke-opacity=".45" stroke-width="1.4" stroke-dasharray="4 8"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/></circle>
+        <circle r="17" fill="url(#corefill)"><animate attributeName="r" values="16;19;16" dur="2.6s" repeatCount="indefinite"/></circle>
+        <text x="0" y="5" text-anchor="middle" font-family="Sora,sans-serif" font-weight="800" font-size="14" fill="#06294a">AI</text>
+      </g>
+    </svg>
+    <div class="scrim"></div>
+    <div class="sweep"></div>
+  </div>
+  <div class="wrap bhero-in">
+    <p class="eyebrow">Book your assessment</p>
+    <h1>Find your biggest <span class="hl">bottleneck</span>.</h1>
+    <p class="lead">One short call. We'll pinpoint the bottleneck costing you the most time and money — and show you exactly how we'd clear it in 30 days. No pitch, no obligation.</p>
+    <div class="facts">
+      <span class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Pick a time that works</span>
+      <span class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 11 3.8H4v7l9.6 9.6a2 2 0 0 0 2.8 0l4.2-4.2a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" stroke="none"/></svg> Free &mdash; no obligation</span>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="book-sec" id="book">
+  <div class="wrap book-grid">
+    <aside class="book-side">
+      <p class="kicker">What to expect</p>
+      <h2>A focused call with Dallas</h2>
+      <p class="lead">Come as you are — no prep needed. We'll talk through your operation and leave you with a clear next step, whether or not you ever work with us.</p>
+      <ul class="exp">
+        <li><span class="ck"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h4>We map where it hurts</h4><p>Quoting, vetting, tracking, forecasting, freight spend — we find the one bottleneck costing you the most.</p></div></li>
+        <li><span class="ck"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h4>You see how we'd clear it</h4><p>A concrete picture of the done-for-you AI we'd build and run, and what a 30-day pilot would look like.</p></div></li>
+        <li><span class="ck"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h4>You leave with a plan</h4><p>A prioritized starting point you can act on — even if you take it and run it yourself.</p></div></li>
+      </ul>
+      <div class="assure">Prefer email first? Reach us at <b><a href="mailto:hello@silkroadscm.com?subject=Assessment%20Inquiry" style="color:var(--blue);text-decoration:underline">hello@silkroadscm.com</a></b> or call <b>(435) 233-6044</b>.</div>
+    </aside>
+
+    <div class="book-embed">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/dallas-silkroadaisolutions/discovery-call-with-dallas?utm_source=scm-site&utm_medium=website&utm_campaign=book-page&hide_gdpr_banner=1"></div>
+      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <div class="fallback"><a class="btn btn-pri" href="https://calendly.com/dallas-silkroadaisolutions/discovery-call-with-dallas?utm_source=scm-site&utm_medium=website&utm_campaign=book-page" target="_blank" rel="noopener">Trouble loading? Open the booking calendar &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="col" style="max-width:20rem">
+        <img class="flogo" src="https://silkroadscm.com/logo-footer.webp" alt="Silk Road SCM logo">
+        <p>AI-powered solutions that clear the bottlenecks in your supply chain — built and run by people who've done the job.</p>
+        <a class="social" href="https://www.linkedin.com/company/silk-road-scm" target="_blank" rel="noopener"><span class="li"><svg viewBox="0 0 448 512" width="17" height="17" fill="currentColor"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></span> Follow on LinkedIn</a>
+      </div>
+      <div class="col">
+        <h4>Explore</h4>
+        <a href="https://silkroadscm.com/#who">Who We Help</a><a href="https://silkroadscm.com/#solutions">Solutions</a><a href="https://silkroadscm.com/#how">How It Works</a><a href="https://silkroadscm.com/#results">Results</a><a href="https://silkroadscm.com/#consulting">Consulting</a><a href="https://silkroadscm.com/privacy.html">Privacy Policy</a><a href="https://silkroadscm.com/terms.html">Terms of Service</a>
+      </div>
+      <div class="col">
+        <h4>Visit us</h4>
+        <address>Silk Road SCM<br>2750 Rasmussen Road, Suite 203<br>Park City, UT 84098</address>
+        <a href="https://maps.app.goo.gl/rSyRaQGuMEsofdNq8" target="_blank" rel="noopener">Map &amp; Directions &rarr;</a>
+      </div>
+      <div class="col">
+        <h4>Get in touch</h4>
+        <a href="#book">Book an assessment</a>
+        <a href="tel:+14352336044">(435) 233-6044</a>
+        <a href="mailto:hello@silkroadscm.com?subject=Website%20Inquiry">hello@silkroadscm.com</a>
+        <a href="https://silkroadaisolutions.com">Sister company: Silk Road AI Solutions</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Silk Road Supply Chain Management, LLC (doing business as Silk Road SCM). Park City, Utah.</span>
+      <span><a href="https://silkroadscm.com/privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="https://silkroadscm.com/terms.html">Terms of Service</a> &nbsp;&middot;&nbsp; AI expertise powered by <a href="https://silkroadaisolutions.com">Silk Road AI Solutions</a>.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

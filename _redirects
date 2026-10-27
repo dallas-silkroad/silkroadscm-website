@@ -1,0 +1,5 @@
+# www to bare domain (replaces the SiteGround .htaccess rule)
+https://www.silkroadscm.com/* https://silkroadscm.com/:splat 301
+# Old article paths that never matched their canonical URLs
+/cash-stuck-in-your-paperwork/* /dispatch/cash-stuck-in-your-paperwork.html 301
+/repricing-market-requoting-desk/* /dispatch/repricing-market-requoting-desk.html 301
